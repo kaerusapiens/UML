@@ -35,3 +35,30 @@ classDiagram
         +salary() int
     }
 ```
+### practice3
+```mermaid
+classDiagram
+    class Shape {
+        <<Interface>>
+        +calc_area() int
+    }
+
+    class Rectangle {
+        -width: int
+        -height: int
+        +calc_area() int
+    }
+
+    class Square {
+        -length: int
+        +calc_area() int
+    }
+
+    class Client {
+        -shape: Shape
+    }
+
+    Shape <|-- Rectangle
+    Shape <|-- Square
+    Client o--> Shape
+```
