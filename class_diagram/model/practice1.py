@@ -17,7 +17,7 @@ class Employee:
         self.__salary = salary
 
     def _work(self)->None:
-        logging.log('動きます')
+        logging.info('動きます')
     
     def get_salary(self)->int:
         return self.__salary

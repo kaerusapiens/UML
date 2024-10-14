@@ -22,7 +22,7 @@ class TestEmployee(TestCase):
     def test_work_logs_message(self):
         # _workメソッドのログメッセージが正しく出力されるか確認
         with self.assertLogs(logger, level='INFO') as log:
-            logger.info("動きます")  # _workメソッドの呼び出しでログを残す
+            self.employee._work()  # _workメソッドの呼び出しでログを残す
         # ログメッセージが「動きます」を含むか確認
         self.assertIn("動きます", log.output[0])
 
